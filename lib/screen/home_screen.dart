@@ -14,13 +14,38 @@ class Homescreen extends StatelessWidget {
       appBar: AppBar(
         title: Text("Home"),
       ),
-      body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            Navigator.of(context)
-                .push(MaterialPageRoute(builder: (context) => secondscreen()));
-          },
-          child: const Text("Home"),
+      // body: Center(
+      //   child: ElevatedButton(
+      //     onPressed: () {
+      //       Navigator.of(context)
+      //           .push(MaterialPageRoute(builder: (context) => secondscreen()));
+      //     },
+      //     child: const Text("Home"),
+      //   ),
+      // ),
+      body: Container(
+        child: Center(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Container(
+                color: Colors.red,
+                height: 120,
+                width: 120,
+              ),
+              Container(
+                color: Colors.green,
+                height: 100,
+                width: 150,
+              ),
+              Container(
+                color: Colors.blue,
+                height: 150,
+                width: 100,
+              ),
+            ],
+          ),
         ),
       ),
     );
